@@ -88,8 +88,8 @@ TEST(Forme, Instanciation3) {
 /*
 TEST(Forme, BoiteEnglobante) {
 	Forme f;
-	ASSERT_EQ (f2.getLargeur(), 0);
-	ASSERT_EQ (f2.getHauteur(), 0);
+	ASSERT_EQ (f.getLargeur(), 0);
+	ASSERT_EQ (f.getHauteur(), 0);
 }
 
 */
