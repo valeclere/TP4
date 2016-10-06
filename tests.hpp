@@ -55,7 +55,7 @@ TEST(Forme, Instanciation1) {
 TEST(Forme, Instanciation2) {	
 	Forme f2;
 	
-	f2.setX(15);
+	f2.setX(15); // pas une erreur
 	f2.setY(25);
 	f2.setCouleur(VERT);
 	ASSERT_EQ (f2.getPoint().getX(), 15);
