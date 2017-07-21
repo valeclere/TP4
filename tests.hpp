@@ -1,6 +1,10 @@
 #ifndef __TESTS_TESTS_HPP__
 #define __TESTS_TESTS_HPP__
 
+/* tests avec google test */
+/* COULEURS est une énumération classique */
+
+
 #include <fstream>
 #include <iostream>
 #include <gtest/gtest.h>
