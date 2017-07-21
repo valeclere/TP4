@@ -3,7 +3,8 @@
 
 #include "Point.hpp"
 
-enum COULEURS { BLANC, NOIR};
+// enum COULEURS { BLANC, NOIR};
+enum class COULEURS { BLANC, NOIR};
 
 class Forme { 
 };
