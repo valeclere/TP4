@@ -1,4 +1,6 @@
+// Le #define suivant permet de creer automatiquement une fonction main()
 #define CATCH_CONFIG_MAIN  
+
 #include "catch.hpp"
 
 #include <fstream>
@@ -10,6 +12,7 @@
 // NOTE : ce test utilise des enum "class"
 // il faut donc utiliser un compilateur g++ >= 6.1
 // ou activer l'option c++11 du compilateur
+// -std=c++11 ou -std=c++0x sur les tres vieux compilateurs
 
 // Les tests ne sont pas exhaustifs, loin de là
 
