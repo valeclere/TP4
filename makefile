@@ -1,4 +1,4 @@
-SRC=cercle.cpp forme.cpp point.cpp rectangle.cpp tests_catch.cpp
+SRC=Cercle.cpp Forme.cpp Point.cpp Rectangle.cpp tests_catch.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=cpp4
 
