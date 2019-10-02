@@ -9,6 +9,6 @@ class Point {
 
 // declaration d'un point ORIGINE
 // il ne faudra pas oublier de l'instancier quelque part
-extern Point ORIGINE;
+// extern Point ORIGINE;
 
 #endif

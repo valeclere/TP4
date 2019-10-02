@@ -1,11 +1,7 @@
-// Le #define suivant permet de creer automatiquement une fonction main()
-#define CATCH_CONFIG_MAIN  
-
-#include "catch.hpp"
-
 #include <fstream>
 #include <iostream>
 
+#include "catch.hpp"
 #include "Point.hpp"
 #include "Rectangle.hpp"
 

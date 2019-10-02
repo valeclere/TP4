@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include<cmath>
-#include <cstdlib>
+#include<cstdlib>
 
 class Element {
    double x, y;
