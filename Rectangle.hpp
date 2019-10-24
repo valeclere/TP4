@@ -3,8 +3,11 @@
 
 #include "Forme.hpp"
 
-class Rectangle  {
+class Rectangle : public Forme{
 
+    public :
+        Rectangle();
+        Rectangle(int,int,int,int);
 };
 
 #endif
