@@ -37,7 +37,7 @@ TEST_CASE("Origine", "[Point]") {
 	REQUIRE(ORIGINE.getY() == 0);
 }
 
-
+/* PROCHAINID prbm méthode à utiliser sans objet???*/ /*Méthode de classe?? Static??*/
 /*
 TEST_CASE("Compteur", "[Forme]") {
    // Pour être correct, ce test doit etre le premier sur Forme
@@ -53,14 +53,13 @@ TEST_CASE("Compteur", "[Forme]") {
 }
 */
 
-/*
 TEST_CASE("Instanciation1", "[Forme]") {
 	Forme f1;
 	REQUIRE(f1.getPoint().getX() == 0);
 	REQUIRE(f1.getPoint().getY() == 0);
-	REQUIRE(f1.getCouleur() ==  COULEURS::BLEU);
+	REQUIRE(f1.getCouleur() ==  COULEURS::BLANC);
 }
-*/
+
 
 /*
 TEST_CASE("Instanciation2", "[Forme]") {
