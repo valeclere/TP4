@@ -38,7 +38,7 @@ TEST_CASE("Origine", "[Point]") {
 }
 
 /* PROCHAINID prbm méthode à utiliser sans objet???*/ /*Méthode de classe?? Static??*/
-/*
+
 TEST_CASE("Compteur", "[Forme]") {
    // Pour être correct, ce test doit etre le premier sur Forme
    REQUIRE(0 == Forme::prochainId());
@@ -51,7 +51,8 @@ TEST_CASE("Compteur", "[Forme]") {
    delete p;
    REQUIRE(2 == Forme::prochainId());	
 }
-*/
+
+
 
 TEST_CASE("Instanciation1", "[Forme]") {
 	Forme f1;
@@ -61,7 +62,7 @@ TEST_CASE("Instanciation1", "[Forme]") {
 }
 
 
-/*
+
 TEST_CASE("Instanciation2", "[Forme]") {
 	Forme f2;
 	
@@ -75,9 +76,8 @@ TEST_CASE("Instanciation2", "[Forme]") {
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::ROUGE);
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::JAUNE);
 }
-*/
 
-/*
+
 TEST_CASE("Instanciation3", "[Forme]") {
     // IL N'Y A PAS D'ERREUR DANS LE TEST, CELA DOIT MARCHER	
 	Forme f2(Point(10,20), COULEURS::ROUGE);
@@ -95,7 +95,7 @@ TEST_CASE("Instanciation3", "[Forme]") {
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::BLEU);
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::ROUGE);
 }
-*/
+
 
 /*
 TEST_CASE("BoiteEnglobante", "[Forme]") {

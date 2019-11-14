@@ -5,9 +5,7 @@
 #include <iostream>
 #include <string>
 
-
-// enum COULEURS { BLANC, NOIR};
-enum class COULEURS { BLANC, NOIR, BLEU};
+enum class COULEURS { BLANC, NOIR, BLEU, VERT, ROUGE, JAUNE};
 
 class Forme{
     Point p;
@@ -20,13 +18,21 @@ class Forme{
     public :
         Forme();
         Forme(const Point &p, int w, int h);
+        Forme(const Point &p, COULEURS couleur);
 
         void affichage();
         static int prochainId();
 
-        Point getPoint() const;
+        &Point getPoint();
+
         COULEURS getCouleur() const;
+        void setCouleur(COULEURS couleur);
+
         int getId() const;
+
+        /*continuer avec setX et setY avant*/
+        void setX(int x);
+        void setY(int y);
 };
 
 #endif
