@@ -8,6 +8,10 @@ class Rectangle : public Forme{
     public :
         Rectangle();
         Rectangle(int,int,int,int);
+
+        std::string toString(void) const;
+        int getLargeur() const;
+        int getHauteur() const;
 };
 
 #endif

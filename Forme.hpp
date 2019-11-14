@@ -8,12 +8,13 @@
 enum class COULEURS { BLANC, NOIR, BLEU, VERT, ROUGE, JAUNE};
 
 class Forme{
-    Point p;
-    int w; /*largeur*/
-    int h; /*hauteur*/
-    COULEURS couleur;
-    static int nbFormes;
-    int Id;
+    protected :
+        Point p;
+        int w; /*largeur*/
+        int h; /*hauteur*/
+        COULEURS couleur;
+        static int nbFormes;
+        int Id;
 
     public :
         Forme();
@@ -23,16 +24,21 @@ class Forme{
         void affichage();
         static int prochainId();
 
-        &Point getPoint();
+        Point& getPoint();
+        int getLargeur() const;
+        int getHauteur() const;
 
         COULEURS getCouleur() const;
         void setCouleur(COULEURS couleur);
 
         int getId() const;
 
-        /*continuer avec setX et setY avant*/
         void setX(int x);
         void setY(int y);
+
+        virtual std::string toString(void) const;
+
+        virtual ~Forme();
 };
 
 #endif

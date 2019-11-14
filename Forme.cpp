@@ -25,7 +25,7 @@ void Forme::affichage()
     std::cout << "nbFormes=" << nbFormes << std::endl;
 }
 
-&Point Forme::getPoint(){
+Point& Forme::getPoint(){
     return this->p;
 }
 
@@ -55,3 +55,19 @@ void Forme::setX(int x){
 void Forme::setY(int y){
     p.setY(y);
 }
+
+int Forme::getLargeur() const{
+    return w;
+}
+
+
+int Forme::getHauteur() const{
+    return h;
+}
+
+std::string Forme::toString(void) const{
+    std::string chaine = "FORME "+std::to_string(p.getX())+" "+std::to_string(p.getY())+" "+std::to_string(w)+" "+std::to_string(h);
+    return chaine;
+}
+
+Forme::~Forme(){};

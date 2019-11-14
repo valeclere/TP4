@@ -4,6 +4,8 @@
 #include "catch.hpp"
 #include "Point.hpp"
 #include "Rectangle.hpp"
+#include "Cercle.hpp"
+#include "Groupe.hpp"
 
 // NOTE : ce test utilise des enum "class"
 // il faut donc utiliser un compilateur g++ >= 6.1
@@ -86,10 +88,10 @@ TEST_CASE("Instanciation3", "[Forme]") {
 	REQUIRE (f2.getCouleur() == COULEURS::ROUGE);
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::BLEU);
 
-	f2.getPoint().setX(15);
+	f2.getPoint().setX(15);/*ne fonctionnne donc pas*/
 	f2.getPoint().setY(25);
 	f2.setCouleur(COULEURS::JAUNE);
-	REQUIRE (f2.getPoint().getX() == 15);
+	REQUIRE (f2.getPoint().getX() == 15); /*problème le point est encore à 10*/
 	REQUIRE (f2.getPoint().getY() == 25);
 	REQUIRE (f2.getCouleur() == COULEURS::JAUNE);
 	REQUIRE_FALSE (f2.getCouleur() == COULEURS::BLEU);
@@ -97,10 +99,51 @@ TEST_CASE("Instanciation3", "[Forme]") {
 }
 
 
-/*
+
 TEST_CASE("BoiteEnglobante", "[Forme]") {
 	Forme f;
 	REQUIRE (f.getLargeur() == 0);
 	REQUIRE (f.getHauteur() == 0);
 }
-*/
+
+
+TEST_CASE("Cercle", "[Cercle]") {
+   int compteur = Forme::prochainId();
+   Cercle c1;
+   Cercle c2(1,2,3,4);
+
+   REQUIRE(c1.toString() == "CERCLE 0 0 0 0");
+   REQUIRE(c2.toString() == "CERCLE 1 2 3 4");
+
+   c2.setRayon(3);
+   REQUIRE(c2.getRayon()   == 3  );
+   REQUIRE(c2.getLargeur() == 3);
+   REQUIRE(c2.getHauteur() == 4);
+
+   REQUIRE(Forme::prochainId() == (compteur+2) );
+}
+
+TEST_CASE("Polymorphisme", "[Forme]") {
+   Forme * f1 = new Cercle;
+   Forme * f2 = new Rectangle;
+
+   REQUIRE(f1->toString() == "CERCLE 0 0 0 0");
+   REQUIRE(f2->toString() == "RECTANGLE 0 0 0 0");
+
+   delete f1;
+   delete f2;
+}
+
+TEST_CASE("Groupe", "[Groupe]") {
+   Forme * f1 = new Cercle;
+   Forme * f2 = new Rectangle;
+   Groupe g1;
+
+   g1.Ajouter(f1);
+   g1.Ajouter(f2);
+
+   std::cout << "affichage du groupe :" << g1.toString() << std::endl;
+
+   delete f1;
+   delete f2;
+}
